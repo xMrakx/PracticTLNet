@@ -11,6 +11,13 @@ public class Class
     public string ClassId { get; private set; }
     public List<Student> Students { get; private set; }
 
+    public int StudentsCount => Students.Count;
+
+    public Student? GetBestStudent()
+    {
+        return Students.MaxBy(item => item.GetAvgMark());
+    }
+
     public IEnumerable<Student> GetStudentsOrderedByMarks()
     {
         return Students.OrderByDescending(item => item.GetAvgMark());
