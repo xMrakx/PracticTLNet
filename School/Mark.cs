@@ -1,4 +1,4 @@
-﻿namespace School;
+﻿namespace SchoolApp;
 
 public class Mark
 {
