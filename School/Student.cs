@@ -18,6 +18,14 @@ public class Student
 
     public void AddMark(Mark mark)
     {
-        Marks.Add(mark);
+        try
+        {
+            Marks.Add(mark);
+        }
+        catch(ArgumentOutOfRangeException ex)
+        {
+            throw ex;
+        }
+        
     }
 }
