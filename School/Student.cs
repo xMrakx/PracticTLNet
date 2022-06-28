@@ -17,15 +17,7 @@ public class Student
     }
 
     public void AddMark(Mark mark)
-    {
-        try
-        {
-            Marks.Add(mark);
-        }
-        catch(ArgumentOutOfRangeException ex)
-        {
-            throw ex;
-        }
-        
+    {   
+        Marks.Add(mark);
     }
 }

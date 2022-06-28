@@ -38,4 +38,16 @@ public class Class
 
         Students.Remove(student);
     }
+
+    public void AddMark(string studentName, Mark mark)
+    {
+        Student? student = Students.FirstOrDefault(s => s.Name == studentName);
+
+        if (student == null)
+        {
+            throw new ArgumentException($"Student with name {studentName} was not found ");
+        }
+
+        student.AddMark(mark);
+    }
 }
