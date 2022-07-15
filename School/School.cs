@@ -2,7 +2,7 @@
 
 public class School
 {
-    public School(string name, List<Class> classes, List<Student> students)
+    public School(string name, List<Class> classes)
     {
         SchoolName = name;
         Classes = classes;
